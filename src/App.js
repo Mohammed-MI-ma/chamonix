@@ -1,19 +1,16 @@
-import About from "./components/About";
-import Booking from "./components/Booking";
+import React, { Suspense, lazy, useEffect, useState } from "react";
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Carousel from "./components/HeroSection";
 import Navbar from "./components/Navbar";
-import RoomSection from "./components/RoomSection";
-import ServiceSection from "./components/ServiceSection";
-import VideoSection from "./components/VideoSection";
 import { FontsConfig } from "./fontsConfig";
-
-import { useEffect, useState } from "react";
 import { loadFonts } from "./services/functions/functions";
 import Loader from "./components/Loader";
+import { LoadingOutlined } from "@ant-design/icons";
 
-import style from "./App.module.css";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { Spin } from "antd";
+const HomePage = lazy(() => import("./pages/Homepage"));
 
 function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -41,13 +38,27 @@ function App() {
       <div className="container-xxl bg-white p-0">
         <Header />
         <Navbar />
-
-        <Carousel />
-        <Booking />
-        <About />
-        <RoomSection />
-        <VideoSection />
-        <ServiceSection />
+        <Routes>
+          <Route path="/" element={<Navigate to={`/web/guest/acceuil`} />} />
+          <Route
+            path={`/web/guest/acceuil`}
+            element={
+              <Suspense
+                fallback={
+                  <Spin
+                    spinning
+                    fullscreen
+                    indicator={
+                      <LoadingOutlined style={{ fontSize: 24 }} spin />
+                    }
+                  />
+                }
+              >
+                <HomePage />
+              </Suspense>
+            }
+          />
+        </Routes>
 
         <Footer />
       </div>

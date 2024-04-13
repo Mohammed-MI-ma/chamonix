@@ -13,22 +13,18 @@ const VideoSection = () => {
         <div className="col-md-6 bg-dark d-flex align-items-center">
           <div className="p-5">
             <h6 className="section-title text-start text-white text-uppercase mb-3">
-              Luxury Living
+              VIVRE LE LUXE
             </h6>
             <h1 className="text-white mb-4">
-              Discover A Brand Luxurious Hotel
+              Découvrez un Hôtel de Luxe Prestigieux
             </h1>
             <p className="text-white mb-4">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-              lorem sit clita duo justo magna dolore erat amet
+              Bienvenue dans notre oasis de luxe où le confort et l'élégance se
+              rencontrent pour créer une expérience inoubliable. Imprégnez-vous
+              de l'ambiance raffinée de notre hôtel, où chaque détail est
+              soigneusement pensé pour répondre à vos besoins les plus
+              exigeants.
             </p>
-            <a href="" className="btn btn-primary py-md-3 px-md-5 me-3">
-              Our Rooms
-            </a>
-            <a href="" className="btn btn-light py-md-3 px-md-5">
-              Book A Room
-            </a>
           </div>
         </div>
         <div className="col-md-6">
@@ -37,11 +33,11 @@ const VideoSection = () => {
               type="button"
               className="btn-play"
               data-bs-toggle="modal"
-              data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
+              data-src="https://www.youtube.com/shorts/s3OKkYfW5oU"
               data-bs-target="#videoModal"
               onClick={() =>
                 handlePlayButtonClick(
-                  "https://www.youtube.com/embed/DWRcNpR6Kdc"
+                  "https://www.youtube.com/shorts/s3OKkYfW5oU"
                 )
               }
             >

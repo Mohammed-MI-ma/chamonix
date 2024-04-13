@@ -2,7 +2,7 @@
 import React from "react";
 import carousel1 from "../../assets/images/carousel-1.jpg"; // Import images from assets folder
 import carousel2 from "../../assets/images/carousel-2.jpg"; // Import images from assets folder
-
+import { Link } from "react-router-dom";
 const Carousel = () => {
   return (
     <div className="container-fluid p-0 mb-5">
@@ -13,26 +13,27 @@ const Carousel = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="w-100" src={carousel1} alt="Image" />
+            <img className="w-100" src={carousel1} alt="hotel hallway" />
             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
               <div className="p-3" style={{ maxWidth: "700px" }}>
                 <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">
-                  Luxury Living
+                  Vivre le Luxe
                 </h6>
                 <h1 className="display-3 text-white mb-4 animated slideInDown">
-                  Discover A Brand Luxurious Hotel
+                  Découvrez le Luxe Élégant de l'Hôtel Le Chamonix
                 </h1>
-                <a
-                  href=""
-                  className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                <Link
+                  to="/rooms"
+                  className="btn py-md-3 px-md-5 me-3 animated slideInLeft"
+                  style={{ background: "#05562b", color: "white" }}
                 >
-                  Our Rooms
-                </a>
+                  Nos chambres
+                </Link>
                 <a
                   href=""
                   className="btn btn-light py-md-3 px-md-5 animated slideInRight"
                 >
-                  Book A Room
+                  Réserver une chambre
                 </a>
               </div>
             </div>
@@ -42,23 +43,11 @@ const Carousel = () => {
             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
               <div className="p-3" style={{ maxWidth: "700px" }}>
                 <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">
-                  Luxury Living
+                  Vivre le Luxe
                 </h6>
                 <h1 className="display-3 text-white mb-4 animated slideInDown">
-                  Discover A Brand Luxurious Hotel
+                  Découvrez un Hôtel de Luxe d'Exception
                 </h1>
-                <a
-                  href=""
-                  className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                >
-                  Our Rooms
-                </a>
-                <a
-                  href=""
-                  className="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                >
-                  Book A Room
-                </a>
               </div>
             </div>
           </div>

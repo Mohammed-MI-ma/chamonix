@@ -5,98 +5,102 @@ const ServiceSection = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="section-title text-center text-primary text-uppercase">
-            Our Services
+          <h6
+            className="section-title text-center text-uppercase"
+            style={{ color: "#05562b" }}
+          >
+            nos Services
           </h6>
           <h1 className="mb-5">
-            Explore Our{" "}
-            <span className="text-primary text-uppercase">Services</span>
+            Explorez nos{" "}
+            <span className="text-uppercase" style={{ color: "#05562b" }}>
+              Services
+            </span>
           </h1>
         </div>
         <div className="row g-4">
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <a className="service-item rounded" href="">
+            <div className="service-item rounded" href="">
               <div className="service-icon bg-transparent border rounded p-1">
                 <div className="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                  <i className="fa fa-hotel fa-2x text-primary"></i>
+                  <i className="fa fa-hotel fa-2x text-secondary"></i>
                 </div>
               </div>
-              <h5 className="mb-3">Rooms & Appartment</h5>
+              <h5 className="mb-3">Chambres et Appartements</h5>
               <p className="text-body mb-0">
-                Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                sed diam stet diam sed stet lorem.
+                Découvrez nos chambres et appartements luxueux conçus pour
+                offrir le summum du confort et de la détente.
               </p>
-            </a>
-          </div>
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <a className="service-item rounded" href="">
-              <div className="service-icon bg-transparent border rounded p-1">
-                <div className="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                  <i className="fa fa-hotel fa-2x text-primary"></i>
-                </div>
-              </div>
-              <h5 className="mb-3">Rooms & Appartment</h5>
-              <p className="text-body mb-0">
-                Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                sed diam stet diam sed stet lorem.
-              </p>
-            </a>
-          </div>
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <a className="service-item rounded" href="">
-              <div className="service-icon bg-transparent border rounded p-1">
-                <div className="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                  <i className="fa fa-hotel fa-2x text-primary"></i>
-                </div>
-              </div>
-              <h5 className="mb-3">Rooms & Appartment</h5>
-              <p className="text-body mb-0">
-                Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                sed diam stet diam sed stet lorem.
-              </p>
-            </a>
-          </div>
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <a className="service-item rounded" href="">
-              <div className="service-icon bg-transparent border rounded p-1">
-                <div className="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                  <i className="fa fa-hotel fa-2x text-primary"></i>
-                </div>
-              </div>
-              <h5 className="mb-3">Rooms & Appartment</h5>
-              <p className="text-body mb-0">
-                Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                sed diam stet diam sed stet lorem.
-              </p>
-            </a>
+            </div>
           </div>{" "}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <a className="service-item rounded" href="">
+            <div className="service-item rounded" href="">
               <div className="service-icon bg-transparent border rounded p-1">
                 <div className="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                  <i className="fa fa-hotel fa-2x text-primary"></i>
+                  <i className="fa fa-hotel fa-2x text-secondary"></i>
                 </div>
               </div>
-              <h5 className="mb-3">Rooms & Appartment</h5>
+              <h5 className="mb-3">Restaurant & Gastronomie</h5>
               <p className="text-body mb-0">
-                Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                sed diam stet diam sed stet lorem.
+                Laissez-vous séduire par une expérience gastronomique
+                exceptionnelle dans notre restaurant primé.
               </p>
-            </a>
+            </div>
           </div>{" "}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <a className="service-item rounded" href="">
+            <div className="service-item rounded" href="">
               <div className="service-icon bg-transparent border rounded p-1">
                 <div className="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                  <i className="fa fa-hotel fa-2x text-primary"></i>
+                  <i className="fa fa-hotel fa-2x text-secondary"></i>
                 </div>
               </div>
-              <h5 className="mb-3">Rooms & Appartment</h5>
+              <h5 className="mb-3">Spa & Bien-être</h5>
               <p className="text-body mb-0">
-                Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                sed diam stet diam sed stet lorem.
+                Accordez-vous une pause bien méritée et offrez-vous une escapade
+                de relaxation totale dans notre spa haut de gamme.
               </p>
-            </a>
+            </div>
+          </div>{" "}
+          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="service-item rounded" href="">
+              <div className="service-icon bg-transparent border rounded p-1">
+                <div className="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                  <i className="fa fa-hotel fa-2x text-secondary"></i>
+                </div>
+              </div>
+              <h5 className="mb-3">Installations Sportives & Loisirs</h5>
+              <p className="text-body mb-0">
+                Profitez d'une gamme complète d'installations sportives et de
+                loisirs pour rester actif et divertir toute la famille.
+              </p>
+            </div>
+          </div>{" "}
+          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="service-item rounded" href="">
+              <div className="service-icon bg-transparent border rounded p-1">
+                <div className="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                  <i className="fa fa-hotel fa-2x text-secondary"></i>
+                </div>
+              </div>
+              <h5 className="mb-3">Événements & Réceptions</h5>
+              <p className="text-body mb-0">
+                Organisez des événements spectaculaires et des réceptions
+                inoubliables dans nos espaces élégants et polyvalents.
+              </p>
+            </div>
+          </div>{" "}
+          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="service-item rounded" href="">
+              <div className="service-icon bg-transparent border rounded p-1">
+                <div className="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                  <i className="fa fa-hotel fa-2x text-secondary"></i>
+                </div>
+              </div>
+              <h5 className="mb-3">Services Complémentaires</h5>
+              <p className="text-body mb-0">
+                De la conciergerie 24 heures sur 24 au service de blanchisserie
+              </p>
+            </div>
           </div>
           {/* Repeat the above structure for each service */}
           {/* You can customize the services and their icons accordingly */}
