@@ -1,11 +1,16 @@
 // Booking.js
 import React from "react";
 import locale from "antd/locale/fr_FR";
+import dayjs from "dayjs";
+
+import "dayjs/locale/fr-ca";
 
 import { ConfigProvider, DatePicker, Select, Space } from "antd";
-const { RangePicker } = DatePicker;
-
+import { Link, useLocation } from "react-router-dom";
+dayjs.locale("fr-ca");
 const Booking = () => {
+  const dateFormat = "YYYY/MM/DD";
+  const { pathname } = useLocation();
   const onOk = (value) => {
     console.log("onOk: ", value);
   };
@@ -18,7 +23,14 @@ const Booking = () => {
   };
 
   return (
-    <ConfigProvider locale={locale}>
+    <ConfigProvider
+      locale={locale}
+      theme={{
+        token: {
+          colorPrimary: "rgb(5, 86, 43)",
+        },
+      }}
+    >
       <div
         className="container-fluid booking pb-5 wow fadeIn"
         data-wow-delay="0.1s"
@@ -28,31 +40,48 @@ const Booking = () => {
             <div className="row g-2">
               <div className="col-md-10">
                 <div className="row g-2">
-                  <div className="col-md-6">
+                  <div className="col-md-3">
                     <div
                       className="date"
                       id="date1"
                       data-target-input="nearest"
                     >
-                      <RangePicker
+                      <DatePicker
+                        size="large"
+                        locale={locale}
                         style={{
                           width: "100%",
                           fontFamily: "Primary-Regular-fr",
                         }}
-                        size="large"
-                        showTime={{
-                          format: "HH",
-                        }}
-                        format="YYYY-MM-DD HH"
-                        onChange={(value, dateString) => {
-                          console.log("Selected Time: ", value);
-                          console.log("Formatted Selected Time: ", dateString);
-                        }}
-                        onOk={onOk}
+                        defaultValue={dayjs(
+                          new Date().toISOString(),
+                          dateFormat
+                        )}
+                        format={dateFormat}
                       />
                     </div>
                   </div>
-
+                  <div className="col-md-3">
+                    <div
+                      className="date"
+                      id="date1"
+                      data-target-input="nearest"
+                    >
+                      <DatePicker
+                        size="large"
+                        locale={locale}
+                        style={{
+                          width: "100%",
+                          fontFamily: "Primary-Regular-fr",
+                        }}
+                        defaultValue={dayjs(
+                          new Date().toISOString(),
+                          dateFormat
+                        )}
+                        format={dateFormat}
+                      />
+                    </div>
+                  </div>
                   <div className="col-md-3">
                     <Select
                       style={{
@@ -157,7 +186,13 @@ const Booking = () => {
                 </div>
               </div>
               <div className="col-md-2">
-                <button className="btn btn-success w-100">Valider</button>
+                <Link className="btn btn-success w-100" to="/web/guest/rooms">
+                  {pathname === "/web/guest/rooms" ? (
+                    <>Changer</>
+                  ) : (
+                    <>Valider</>
+                  )}
+                </Link>
               </div>
             </div>
           </div>

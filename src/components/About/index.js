@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import about1 from "../../assets/images/about-1.jpg";
 const About = () => {
   return (

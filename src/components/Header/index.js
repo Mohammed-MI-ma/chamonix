@@ -1,17 +1,22 @@
 // Header.js
 import React from "react";
 import styles from "./Header.module.css"; // Import CSS module for styling
-import { useNavigate } from "react-router-dom";
-import { Avatar } from "antd";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Avatar, Button } from "antd";
 import img from "../../assets/images/logo.png";
+import { BiMenuAltRight } from "react-icons/bi";
+
 const Header = () => {
+  const { pathname } = useLocation();
+
   const navigate = useNavigate();
   return (
     <div className="container-fluid bg-dark px-0">
       <div className="row gx-0">
         <div className="col-lg-3 bg-dark d-none d-lg-block">
-          <a
-            href="index.html"
+          <div
+            onClick={() => navigate("/")}
+            style={{ cursor: "pointer" }}
             className="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center"
           >
             {" "}
@@ -28,7 +33,7 @@ const Header = () => {
             >
               Le Chamonix
             </h1>
-          </a>
+          </div>
         </div>
         <div className="col-lg-9">
           <div className="row gx-0 bg-white d-none d-lg-flex">
@@ -48,10 +53,13 @@ const Header = () => {
             </div>
           </div>
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-            <a href="index.html" className="navbar-brand d-block d-lg-none">
+            <div
+              onClick={() => navigate("/")}
+              className="navbar-brand d-block d-lg-none"
+            >
               <h1
                 className="m-0 text-primary text-uppercase text-white"
-                style={{ fontSize: "30px", fontFamily: "Special-font-fr" }}
+                style={{ fontSize: "20px", fontFamily: "Special-font-fr" }}
               >
                 <Avatar
                   style={{
@@ -62,15 +70,15 @@ const Header = () => {
                 ></Avatar>{" "}
                 Le Chamonix
               </h1>
-            </a>
-            <button
+            </div>
+            <Button
               type="button"
               className="navbar-toggler"
               data-bs-toggle="collapse"
               data-bs-target="#navbarCollapse"
             >
-              <span className="navbar-toggler-icon"></span>
-            </button>
+              <BiMenuAltRight size={"large"} />
+            </Button>
             <div
               className="collapse navbar-collapse justify-content-between"
               id="navbarCollapse"
@@ -88,17 +96,20 @@ const Header = () => {
                   Services
                 </a>
               </div>
-              <div
-                className="btn py-4 px-md-5 d-none d-lg-block"
-                style={{
-                  background: "#05562b",
-                  color: "white",
-                  fontFamily: "Special-font-fr",
-                }}
-                onClick={() => navigate("/rooms")}
-              >
-                Réserver maintenant<i className="fa fa-arrow-right ms-3"></i>
-              </div>
+
+              {pathname !== "/web/guest/rooms" && (
+                <div
+                  className="btn py-4 px-md-5 d-none d-lg-block"
+                  style={{
+                    background: "#05562b",
+                    color: "white",
+                    fontFamily: "Special-font-fr",
+                  }}
+                  onClick={() => navigate("/rooms")}
+                >
+                  Réserver maintenant<i className="fa fa-arrow-right ms-3"></i>
+                </div>
+              )}
             </div>
           </nav>
         </div>

@@ -11,6 +11,7 @@ import { LoadingOutlined } from "@ant-design/icons";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Spin } from "antd";
 const HomePage = lazy(() => import("./pages/Homepage"));
+const BookingPage = lazy(() => import("./pages/BookingPage"));
 
 function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -55,6 +56,24 @@ function App() {
                 }
               >
                 <HomePage />
+              </Suspense>
+            }
+          />
+          <Route
+            path={`/web/guest/rooms`}
+            element={
+              <Suspense
+                fallback={
+                  <Spin
+                    spinning
+                    fullscreen
+                    indicator={
+                      <LoadingOutlined style={{ fontSize: 24 }} spin />
+                    }
+                  />
+                }
+              >
+                <BookingPage />
               </Suspense>
             }
           />

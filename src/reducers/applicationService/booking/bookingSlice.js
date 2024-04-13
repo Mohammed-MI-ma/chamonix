@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   reservation: {
     dateDebut: new Date().toISOString(),
-    dateFin: "",
-    adults: 1,
-    children: 0,
+    dateFin: null,
+    adults: "1personne",
+    children: "child0child",
   },
 };
 const bookingSlice = createSlice({
