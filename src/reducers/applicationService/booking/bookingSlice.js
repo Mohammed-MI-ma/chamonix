@@ -1,7 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  reservation: {},
+  reservation: {
+    dateDebut: new Date().toISOString(),
+    dateFin: "",
+    adults: 1,
+    children: 0,
+  },
 };
 const bookingSlice = createSlice({
   name: "booking",
