@@ -58,9 +58,8 @@ const Header = () => {
                     verticalAlign: "middle",
                   }}
                   size="large"
-                >
-                  A
-                </Avatar>{" "}
+                  src={img}
+                ></Avatar>{" "}
                 Le Chamonix
               </h1>
             </a>
