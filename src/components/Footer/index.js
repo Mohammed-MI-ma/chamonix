@@ -8,17 +8,17 @@ const Footer = () => {
     >
       <div className="container pb-5">
         <div className="row g-5">
-          <div className="col-md-6 col-lg-4">
+          <div className="col-md-6 col-lg-6">
             <div className="rounded p-4">
               <h1
                 className="text-white text-uppercase mb-3"
                 style={{ fontFamily: "Special-font-fr" }}
               >
-                Le Chamonix
+                Chamonix
               </h1>
             </div>
           </div>
-          <div className="col-md-6 col-lg-3">
+          <div className="col-md-6 col-lg-6">
             <h6
               className="section-title text-start text-uppercase mb-4"
               style={{ fontFamily: "Special-font-fr" }}
@@ -27,7 +27,7 @@ const Footer = () => {
             </h6>
             <p className="mb-2" style={{ fontFamily: "Special-font-fr" }}>
               <i className="fa fa-map-marker-alt me-3"></i>Avenue de la Marche
-              Verte, Ifrane, Maroc
+              Verte, Ifrane, Morocco
             </p>
             <p className="mb-2" style={{ fontFamily: "Special-font-fr" }}>
               <i className="fa fa-phone-alt me-3"></i>+212 535 566 028
@@ -44,48 +44,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="col-lg-5 col-md-12">
-            <div className="row gy-5 g-4">
-              <div className="col-md-6">
-                <h6
-                  className="section-title text-start text-uppercase mb-4"
-                  style={{ fontFamily: "Special-font-fr" }}
-                >
-                  Hôtel
-                </h6>
-                <p
-                  className="btn btn-link"
-                  style={{ fontFamily: "Special-font-fr" }}
-                >
-                  À Propos de Nous
-                </p>
-                <p
-                  className="btn btn-link"
-                  style={{ fontFamily: "Special-font-fr" }}
-                >
-                  Contactez-nous
-                </p>
-                <p
-                  className="btn btn-link"
-                  style={{ fontFamily: "Special-font-fr" }}
-                >
-                  Politique de Confidentialité
-                </p>
-                <p
-                  className="btn btn-link"
-                  style={{ fontFamily: "Special-font-fr" }}
-                >
-                  Conditions Générales
-                </p>
-                <p
-                  className="btn btn-link"
-                  style={{ fontFamily: "Special-font-fr" }}
-                >
-                  Support
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div className="container">
@@ -93,9 +51,9 @@ const Footer = () => {
           <div className="row">
             <small className="col-md-6 text-center text-md-start mb-3 mb-md-0">
               <small className="border-bottom" href="#">
-                © Hôtel Le Chamonix
+                © Hotel Le Chamonix
               </small>
-              , Tous droits réservés 2024
+              , All rights reserved 2024
             </small>
           </div>
         </div>

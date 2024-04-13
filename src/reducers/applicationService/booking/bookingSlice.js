@@ -6,6 +6,7 @@ const initialState = {
     dateFin: null,
     adults: "1personne",
     children: "child0child",
+    room: { id: "0", roomPrice: "0", numberOfBeds: "0" },
   },
 };
 const bookingSlice = createSlice({

@@ -1,4 +1,3 @@
-// Header.js
 import React from "react";
 import styles from "./Header.module.css"; // Import CSS module for styling
 import { useLocation, useNavigate } from "react-router-dom";
@@ -8,8 +7,8 @@ import { BiMenuAltRight } from "react-icons/bi";
 
 const Header = () => {
   const { pathname } = useLocation();
-
   const navigate = useNavigate();
+
   return (
     <div className="container-fluid bg-dark px-0">
       <div className="row gx-0">
@@ -19,19 +18,19 @@ const Header = () => {
             style={{ cursor: "pointer" }}
             className="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center"
           >
-            {" "}
             <Avatar
               src={img}
               style={{
                 verticalAlign: "middle",
               }}
               size="large"
-            ></Avatar>{" "}
+            />
+            &nbsp;
             <h1
               className="m-0 text-primary text-uppercase text-white"
               style={{ fontSize: "30px", fontFamily: "Special-font-fr" }}
             >
-              Le Chamonix
+              Chamonix
             </h1>
           </div>
         </div>
@@ -68,7 +67,7 @@ const Header = () => {
                   size="large"
                   src={img}
                 ></Avatar>{" "}
-                Le Chamonix
+                Chamonix
               </h1>
             </div>
             <Button
@@ -89,27 +88,18 @@ const Header = () => {
                   className="nav-item nav-link active"
                   style={{ fontFamily: "Primary-Regular-fr" }}
                 >
-                  Accueil
+                  Home
                 </div>
 
-                <a href="service.html" className="nav-item nav-link">
-                  Services
-                </a>
-              </div>
-
-              {pathname !== "/web/guest/rooms" && (
                 <div
-                  className="btn py-4 px-md-5 d-none d-lg-block"
-                  style={{
-                    background: "#05562b",
-                    color: "white",
-                    fontFamily: "Special-font-fr",
-                  }}
-                  onClick={() => navigate("/rooms")}
+                  onClick={() => navigate("web/guest/rooms")}
+                  className="nav-item nav-link active"
+                  style={{ fontFamily: "Primary-Regular-fr" }}
                 >
-                  Réserver maintenant<i className="fa fa-arrow-right ms-3"></i>
+                  {" "}
+                  Our Rooms
                 </div>
-              )}
+              </div>
             </div>
           </nav>
         </div>

@@ -3,11 +3,8 @@ import React from "react";
 import locale from "antd/locale/fr_FR";
 import dayjs from "dayjs";
 
-import "dayjs/locale/fr-ca";
-
 import { ConfigProvider, DatePicker, Select, Space } from "antd";
 import { Link, useLocation } from "react-router-dom";
-dayjs.locale("fr-ca");
 const Booking = () => {
   const dateFormat = "YYYY/MM/DD";
   const { pathname } = useLocation();
@@ -46,6 +43,7 @@ const Booking = () => {
                       id="date1"
                       data-target-input="nearest"
                     >
+                      <small>Period from</small>
                       <DatePicker
                         size="large"
                         locale={locale}
@@ -67,6 +65,7 @@ const Booking = () => {
                       id="date1"
                       data-target-input="nearest"
                     >
+                      <small>To</small>
                       <DatePicker
                         size="large"
                         locale={locale}
@@ -83,12 +82,13 @@ const Booking = () => {
                     </div>
                   </div>
                   <div className="col-md-3">
+                    <small>How many grown-ups</small>
                     <Select
                       style={{
                         width: "100%",
                         fontFamily: "Primary-Regular-fr",
                       }}
-                      defaultValue="1 personne"
+                      defaultValue="1personne"
                       size="large"
                       onChange={handleChange}
                       options={[
@@ -96,7 +96,7 @@ const Booking = () => {
                           value: "1personne",
                           label: (
                             <div style={{ fontFamily: "Primary-Regular-fr" }}>
-                              1 personne
+                              1 person
                             </div>
                           ),
                         },
@@ -104,7 +104,7 @@ const Booking = () => {
                           value: "2personne",
                           label: (
                             <div style={{ fontFamily: "Primary-Regular-fr" }}>
-                              2 personnes
+                              2 people
                             </div>
                           ),
                         },
@@ -112,7 +112,7 @@ const Booking = () => {
                           value: "3personne",
                           label: (
                             <div style={{ fontFamily: "Primary-Regular-fr" }}>
-                              3 personnes
+                              3 people
                             </div>
                           ),
                         },
@@ -120,17 +120,16 @@ const Booking = () => {
                           value: "4personne",
                           label: (
                             <div style={{ fontFamily: "Primary-Regular-fr" }}>
-                              4 personnes
+                              4 people
                             </div>
                           ),
                         },
                       ]}
                     />
                   </div>
-                  <div
-                    className="col-md-3 d-flex "
-                    style={{ justifyContent: "center" }}
-                  >
+                  <div className="col-md-3 ">
+                    <small>How many children</small>
+
                     <Select
                       onChange={handleChangeChild}
                       size="large"
@@ -144,7 +143,7 @@ const Booking = () => {
                           value: "0child",
                           label: (
                             <div style={{ fontFamily: "Primary-Regular-fr" }}>
-                              Sans enfant
+                              None
                             </div>
                           ),
                         },
@@ -152,7 +151,7 @@ const Booking = () => {
                           value: "1child",
                           label: (
                             <div style={{ fontFamily: "Primary-Regular-fr" }}>
-                              1 enfant
+                              1 child
                             </div>
                           ),
                         },
@@ -160,7 +159,7 @@ const Booking = () => {
                           value: "2child",
                           label: (
                             <div style={{ fontFamily: "Primary-Regular-fr" }}>
-                              2 enfants
+                              2 children
                             </div>
                           ),
                         },
@@ -168,7 +167,7 @@ const Booking = () => {
                           value: "3child",
                           label: (
                             <div style={{ fontFamily: "Primary-Regular-fr" }}>
-                              3 enfants
+                              3 children
                             </div>
                           ),
                         },
@@ -176,7 +175,7 @@ const Booking = () => {
                           value: "4child",
                           label: (
                             <div style={{ fontFamily: "Primary-Regular-fr" }}>
-                              4 enfants
+                              4 children
                             </div>
                           ),
                         },
@@ -185,12 +184,17 @@ const Booking = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-2">
+              <div
+                className="col-md-2"
+                style={{ display: "flex", alignItems: "flex-end" }}
+              >
                 <Link className="btn btn-success w-100" to="/web/guest/rooms">
                   {pathname === "/web/guest/rooms" ? (
-                    <>Changer</>
+                    <>SUBMIT</>
                   ) : (
-                    <>Valider</>
+                    <>
+                      Book now <i className="fa fa-arrow-right ms-3"></i>
+                    </>
                   )}
                 </Link>
               </div>
