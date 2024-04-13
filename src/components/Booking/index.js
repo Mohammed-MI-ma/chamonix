@@ -12,6 +12,11 @@ const Booking = () => {
   const handleChange = (value) => {
     console.log(`selected ${value}`);
   };
+
+  const handleChangeChild = (value) => {
+    console.log(`selected child${value}`);
+  };
+
   return (
     <ConfigProvider locale={locale}>
       <div
@@ -98,6 +103,7 @@ const Booking = () => {
                     style={{ justifyContent: "center" }}
                   >
                     <Select
+                      onChange={handleChangeChild}
                       size="large"
                       defaultValue="0child"
                       style={{

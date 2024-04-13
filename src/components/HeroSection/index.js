@@ -29,10 +29,7 @@ const Carousel = () => {
                 >
                   Nos chambres
                 </Link>
-                <a
-                  href=""
-                  className="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                >
+                <a className="btn btn-light py-md-3 px-md-5 animated slideInRight">
                   Réserver une chambre
                 </a>
               </div>

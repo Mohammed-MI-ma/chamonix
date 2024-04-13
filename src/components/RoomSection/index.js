@@ -70,12 +70,7 @@ const RoomSection = () => {
                   accueillante et ses équipements modernes ...
                 </p>
                 <div className="d-flex justify-content-between">
-                  <a
-                    className="btn btn-sm btn-success rounded py-2 px-4"
-                    href=""
-                  >
-                    details
-                  </a>
+                  <a>details</a>
                   <a className="btn btn-sm btn-dark rounded py-2 px-4" href="">
                     Réserver{" "}
                   </a>
@@ -125,13 +120,10 @@ const RoomSection = () => {
                   confortable et de commodités modernes....
                 </p>
                 <div className="d-flex justify-content-between">
-                  <a
-                    className="btn btn-sm btn-success rounded py-2 px-4"
-                    href=""
-                  >
+                  <a className="btn btn-sm btn-success rounded py-2 px-4">
                     details
                   </a>
-                  <a className="btn btn-sm btn-dark rounded py-2 px-4" href="">
+                  <a className="btn btn-sm btn-dark rounded py-2 px-4">
                     Réserver{" "}
                   </a>
                 </div>
@@ -179,10 +171,7 @@ const RoomSection = () => {
                   expérience de séjour exceptionnelle....
                 </p>
                 <div className="d-flex justify-content-between">
-                  <a
-                    className="btn btn-sm btn-success rounded py-2 px-4"
-                    href=""
-                  >
+                  <a className="btn btn-sm btn-success rounded py-2 px-4">
                     details
                   </a>
                   <a className="btn btn-sm btn-dark rounded py-2 px-4" href="">
