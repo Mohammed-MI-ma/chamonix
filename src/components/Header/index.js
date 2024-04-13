@@ -40,7 +40,12 @@ const Header = () => {
           </div>
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
             <a href="index.html" className="navbar-brand d-block d-lg-none">
-              <h1 className="m-0 text-primary text-uppercase">Chamonix</h1>
+              <h1
+                className="m-0 text-primary text-uppercase text-white"
+                style={{ fontSize: "30px", fontFamily: "Special-font-fr" }}
+              >
+                Le Chamonix
+              </h1>
             </a>
             <button
               type="button"

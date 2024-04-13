@@ -69,14 +69,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <Link
-              to="/"
-              className="btn py-3 px-5 mt-2"
-              style={{ background: "#05562b", color: "white" }}
-              href=""
-            >
-              Explorer plus
-            </Link>
           </div>
           <div className="col-lg-6">
             <div className="row g-3">
