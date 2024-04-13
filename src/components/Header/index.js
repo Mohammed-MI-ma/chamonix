@@ -2,7 +2,8 @@
 import React from "react";
 import styles from "./Header.module.css"; // Import CSS module for styling
 import { useNavigate } from "react-router-dom";
-
+import { Avatar } from "antd";
+import img from "../../assets/images/logo.png";
 const Header = () => {
   const navigate = useNavigate();
   return (
@@ -13,6 +14,14 @@ const Header = () => {
             href="index.html"
             className="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center"
           >
+            {" "}
+            <Avatar
+              src={img}
+              style={{
+                verticalAlign: "middle",
+              }}
+              size="large"
+            ></Avatar>{" "}
             <h1
               className="m-0 text-primary text-uppercase text-white"
               style={{ fontSize: "30px", fontFamily: "Special-font-fr" }}
@@ -44,6 +53,14 @@ const Header = () => {
                 className="m-0 text-primary text-uppercase text-white"
                 style={{ fontSize: "30px", fontFamily: "Special-font-fr" }}
               >
+                <Avatar
+                  style={{
+                    verticalAlign: "middle",
+                  }}
+                  size="large"
+                >
+                  A
+                </Avatar>{" "}
                 Le Chamonix
               </h1>
             </a>
